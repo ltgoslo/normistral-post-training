@@ -205,3 +205,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific
+*.zip
+checkpoints/
+hf_cache/
+triton_cache/
+tmp/
+logs/
+evaluation_logs/
+wandb/
+*.bin
+*.safetensors

@@ -1,0 +1,12 @@
+# The experiments used torch 2.5/2.6 (ROCm 6.2), transformers 4.5x and vllm 0.6.6 on LUMI.
+torch>=2.5
+transformers>=4.46
+datasets
+huggingface_hub
+vllm            # LLM-based translation, judges and generate_vllm.py
+flash-attn      # rl/ (attn_implementation="flash_attention_2")
+tqdm
+nltk            # data/translate_mt.py
+sentencepiece   # NLLB / MADLAD tokenizers
+packaging
+wandb

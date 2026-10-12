@@ -1,0 +1,12 @@
+{{- bos_token }}
+{%- for message in messages %}
+{%- if message['role'] == 'user' %}
+{{- '<instruction>' + message['content'] + '</instruction>' }}
+{%- elif message['role'] == 'system' %}
+{{- '<system_prompt>' + message['content'] + '</system_prompt>' }}
+{%- elif message['role'] == 'assistant' %}
+{%- generation %}
+{{- message['content'] + '</s>' }}
+{%- endgeneration %}
+{%- endif %}
+{%- endfor %}
